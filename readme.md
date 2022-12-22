@@ -36,3 +36,13 @@ Input/Output
     n ≠ m.
 
     [output] integer
+
+
+
+    Turning all the different bits to 1 is straightforward with xor:
+    n XOR m
+  
+    Turning all the bits to 0 is also straightforward with AND and NOT:
+    (n XOR m) AND (NOT(x XOR m)) 
+
+    if you n & ~n you get 0 but if you  n & ~n+1 you get the first value that was 1.
